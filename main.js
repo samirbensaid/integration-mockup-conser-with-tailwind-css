@@ -5,18 +5,23 @@ const menuPopUp = document.querySelector('#menuPopUP')
 const closeBtn = document.querySelector('#closeBtn')
 
 function displayPopUp(){
-    menuPopUp.classList.remove('hide')
-    menuPopUp.classList.add('active')
+    // menuPopUp.classList.remove('hide')
+    // menuPopUp.classList.add('active')
+    menuPopUp.style.display = "block"
 }
 
 
-function closePopUp(){
-    menuPopUp.classList.remove('active')
-    menuPopUp.classList.add('hide')
+function closePopUp(e){
+    // menuPopUp.classList.remove('active')
+    // menuPopUp.classList.add('hide')
+    console.log(!e.target.closest(".active"));
+    if(e.target.matches("#closeBtn") || !e.target.closest(".active")){
+    menuPopUp.style.display = "none"
+}
 }
 
 navBtn.addEventListener('click',displayPopUp)
-closeBtn.addEventListener('click',closePopUp)
+document.addEventListener('click',closePopUp,true)
 
 
 
@@ -36,7 +41,10 @@ function addInputs(e) {
    const label = document.createElement('label')
     label.setAttribute('class','addInput')
     label.innerText=inputForm[0].children.length
+
+
     const cloneInput = inputText.cloneNode(true);
+    
 
     container.appendChild(label)
     container.appendChild(cloneInput)
