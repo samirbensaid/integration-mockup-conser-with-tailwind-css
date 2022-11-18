@@ -25,12 +25,74 @@
           <a href="#">Portfolio Check</a>
       </div>
       <a href="#" class="hidden lg:flex">Menu</a>
-      <button class="flex"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="flex" id="navBtn"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.0002 20L28.0002 20" stroke="white" stroke-width="1.5" />
               <path d="M4.00024 12H28.0002" stroke="white" stroke-width="1.5" />
           </svg>
       </button>
+
   </nav>
+
+
+  <div id="menuPopUP" class="hide">
+    <section class="border-b">
+      <div class="flex justify-between py-5 w-[95%] mx-auto">
+      <div class="border border-[#000000] border-opacity-10 w-12 h-12 rounded-[50px] text-center flex items-center justify-center">
+        <a href="#" class="Poppins text-sm leading-3 font-normal text-center text-[#1D416D]">EN</a>
+      </div>
+  
+      <div class="flex justify-center w-[30%] gap-x-4">
+        <div class="border border-white border-opacity-10 rounded-[50px] py-2 px-6 flex bg-[#97AD1D]">
+          <a href="#" class="text-white">Portfolio Check</a>
+        </div>
+        <button id="closeBtn" class="text-[#1D416D]">close</button>
+      </div>
+    </div>
+    </section>
+    <section class="lg:flex lg:flex-wrap lg:gap-0 grid grid-cols-1 gap-0">
+      <article class="lg:border-r lg:basis-[30%] p-12 pb-24 border-b">
+        <div class="container mx-auto grid grid-cols-1 gap-10 ">
+        <p class="Poppins text-xs leading-[10px] font-normal text-[#231F20] opacity-50 not-italic">Contact Information</p>
+        <address class="Gilroy text-[#231F20] text-lg leading-6 font-semibold w-[64%] not-italic">
+          Switzerland, Geneva, 11, bd James fazy 1201
+        </address>
+        <address class="Gilroy text-[#231F20] text-lg leading-6 font-semibold not-italic">
+          <a href="mailto:info@conser.ch">info@conser.ch</a>
+        </address>
+        <address class="Gilroy text-[#231F20] text-lg leading-6 font-semibold not-italic">
+          <a href="tel:+41 22 907 71 00">+41 22 907 71 00</a>
+        </address>
+        <nav class="flex justify-start gap-10">
+          <a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.41608 0H13.5839C14.9183 0 16 1.08172 16 2.41608V13.5823C16 14.9167 14.9183 15.9984 13.5839 15.9984H2.41608C1.08172 15.9984 0 14.9167 0 13.5823V2.41608C0 1.08172 1.08172 0 2.41608 0ZM5.11936 13.4271V6.1564H2.70272V13.4271H5.11936ZM3.91136 5.16312C4.75408 5.16312 5.27864 4.6048 5.27864 3.90712C5.26293 3.19368 4.75411 2.65088 3.92736 2.65088C3.10072 2.65088 2.56016 3.19369 2.56016 3.90712C2.56016 4.60484 3.08458 5.16312 3.8956 5.16312H3.9113H3.91136ZM8.87359 13.4271H6.45695L6.45701 13.427C6.45701 13.427 6.48872 6.83852 6.45701 6.15628H8.87365V7.18572C9.19482 6.69031 9.76967 5.98572 11.0516 5.98572C12.6416 5.98572 13.8338 7.02484 13.8338 9.25812V13.4271H11.4174V9.5374C11.4174 8.55998 11.0675 7.89324 10.193 7.89324C9.52545 7.89324 9.12782 8.34291 8.95311 8.77708C8.8893 8.93241 8.87359 9.14949 8.87359 9.3668V13.4271Z" fill="#231F20"/>
+            </svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.95 3.05H12V0H9.575C6.65 0.125 6.05 1.775 6 3.5V5.025H4V8H6V16H9V8H11.475L11.95 5.025H9V4.1C9 3.525 9.4 3.05 9.95 3.05Z" fill="#231F20"/>
+              </svg>
+              </a>
+              <a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00002 0C10.1727 0 10.4451 0.00920925 11.2984 0.0481422C12.1499 0.0869798 12.7314 0.222229 13.2403 0.420005C13.7664 0.624419 14.2125 0.897966 14.6573 1.34271C15.102 1.78748 15.3756 2.23363 15.58 2.7597C15.7778 3.26855 15.913 3.8501 15.9519 4.70161C15.9908 5.55489 16 5.82733 16 8.00002C16 10.1727 15.9908 10.4451 15.9519 11.2984C15.913 12.1499 15.7778 12.7314 15.58 13.2403C15.3756 13.7664 15.102 14.2125 14.6573 14.6573C14.2125 15.102 13.7664 15.3756 13.2403 15.58C12.7314 15.7778 12.1499 15.913 11.2984 15.9519C10.4451 15.9908 10.1727 16 8.00002 16C5.82733 16 5.55489 15.9908 4.70161 15.9519C3.8501 15.913 3.26855 15.7778 2.7597 15.58C2.23363 15.3756 1.78748 15.102 1.34271 14.6573C0.897966 14.2125 0.624419 13.7664 0.420005 13.2403C0.222229 12.7314 0.0869798 12.1499 0.0481422 11.2984C0.00920925 10.4451 0 10.1727 0 8.00002C0 5.82733 0.00920925 5.55489 0.0481422 4.70161C0.0869798 3.8501 0.222229 3.26855 0.420005 2.7597C0.624419 2.23363 0.897966 1.78748 1.34271 1.34271C1.78748 0.897966 2.23363 0.624419 2.7597 0.420005C3.26855 0.222229 3.8501 0.0869798 4.70161 0.0481422C5.55489 0.00920925 5.82733 0 8.00002 0ZM8.00002 1.44144C5.86391 1.44144 5.61088 1.4496 4.76731 1.48809C3.98732 1.52366 3.56373 1.65398 3.28183 1.76354C2.90841 1.90867 2.64191 2.08202 2.36198 2.36198C2.08202 2.64191 1.90867 2.90841 1.76354 3.28183C1.65398 3.56373 1.52366 3.98732 1.48809 4.76731C1.4496 5.61088 1.44144 5.86391 1.44144 8.00002C1.44144 10.1361 1.4496 10.3891 1.48809 11.2327C1.52366 12.0127 1.65398 12.4363 1.76354 12.7182C1.90867 13.0916 2.08205 13.3581 2.36198 13.638C2.64191 13.918 2.90841 14.0913 3.28183 14.2365C3.56373 14.346 3.98732 14.4763 4.76731 14.5119C5.61079 14.5504 5.86375 14.5586 8.00002 14.5586C10.1362 14.5586 10.3892 14.5504 11.2327 14.5119C12.0127 14.4763 12.4363 14.346 12.7182 14.2365C13.0916 14.0913 13.3581 13.918 13.638 13.638C13.918 13.3581 14.0913 13.0916 14.2365 12.7182C14.346 12.4363 14.4763 12.0127 14.5119 11.2327C14.5504 10.3891 14.5586 10.1361 14.5586 8.00002C14.5586 5.86391 14.5504 5.61088 14.5119 4.76731C14.4763 3.98732 14.346 3.56373 14.2365 3.28183C14.0913 2.90841 13.918 2.64191 13.638 2.36198C13.3581 2.08202 13.0916 1.90867 12.7182 1.76354C12.4363 1.65398 12.0127 1.52366 11.2327 1.48809C10.3891 1.4496 10.1361 1.44144 8.00002 1.44144ZM8.00002 3.89189C10.2689 3.89189 12.1081 5.73114 12.1081 8.00002C12.1081 10.2689 10.2689 12.1081 8.00002 12.1081C5.73114 12.1081 3.89189 10.2689 3.89189 8.00002C3.89189 5.73114 5.73114 3.89189 8.00002 3.89189ZM8.00002 10.6667C9.47276 10.6667 10.6667 9.47276 10.6667 8.00002C10.6667 6.52723 9.47276 5.33333 8.00002 5.33333C6.52723 5.33333 5.33333 6.52723 5.33333 8.00002C5.33333 9.47276 6.52723 10.6667 8.00002 10.6667ZM13.2304 3.72959C13.2304 4.25979 12.8006 4.68957 12.2704 4.68957C11.7402 4.68957 11.3104 4.25979 11.3104 3.72959C11.3104 3.19939 11.7402 2.76957 12.2704 2.76957C12.8006 2.76957 13.2304 3.19939 13.2304 3.72959Z" fill="#231F20"/>
+                </svg></a>
+        </nav>
+        
+          <button class="border border-[#EAEAEA] py-3 w-[15vw]">Client Area</button>
+        
+      </div>
+      </article>
+
+      <article class="lg:basis-[70%] flex justify-center">
+        <nav class="flex flex-col gap-y-10 modalNav py-10">
+          <a href="#">About us</a>
+          <a href="#">Expertise & technology</a>
+          <a href="#">Enhanced Methodology</a>
+          <a href="#">Digital Solutions</a>
+          <a href="#">News</a>
+          <a href="#">Contact</a>
+        </nav>
+      </article>
+    </section>
+  
+  </div>
 </header>
 
 <!-- ******************************** main ***************************** -->
@@ -42,7 +104,7 @@
     100% dedicated to Responsible Investment since 2007
   </p>
 
-  <h1 class="Gilroy text-[30px] leading-[50px] lg:text-[88px] lg:leading-[94px] capitalize font-semibold text-white  tracking-[-2px] sm:w-[65%] md:w-[55%]">Building trust through ESG verification</h1>
+  <h1 class="Gilroy text-[30px] leading-[50px] lg:text-[88px] lg:leading-[94px] capitalize font-semibold text-white  tracking-[-2px] sm:w-[65%] md:w-[55%] transition duration-1000 ease-in-out delay-0">Building trust through ESG verification</h1>
   <div class="mt-5">
   <button class="bg-[#97AD1D] px-6 py-6 text-center rounded-[8px] text-white Gilroy text-xs leading-3 tracking-[1px] uppercase">
     Ready to Check
@@ -373,18 +435,18 @@
 
 <!-- *********************** canopia section **************************** -->
 
-<section class="relative pb-[5%]">
-  <article class="lg:w-[60%] grid grid-cols-1 gap-10 py-20 w-[85%] mx-auto">
+<section class="relative pb-[10%]">
+  <article class="grid grid-cols-1 gap-10 py-20 w-[85vw] mx-auto">
     <div class="flex flex-col gap-y-5">
       <p class="Poppins text-base opacity-50 Poppins text-[#231F20] leading-4 uppercase font-normal tracking-[1px]">
         Canopia
       </p>
-      <h2 class="Gilroy text-[45px] font-semibold leading-[50px] mix-blend-normal text-[#231F20] tracking-[-2px] z-50">
+      <h2 class="Gilroy text-[45px] font-semibold leading-[50px] mix-blend-normal text-[#231F20] tracking-[-2px] z-50 lg:w-[45vw]">
         Digital ecosystem for institutional investor
       </h2>
     </div>
-    <div class="lg:w-[85%]">
-      <p class="Poppins font-normal text-2xl leading-10 text-[#231F20]">
+    <div class="lg:w-[60vw]">
+      <p class="Poppins font-normal text-2xl leading-10 text-[#231F20] lg:w-[43vw]">
         Conser and Fundo join forces to offer institutional investors a digital ecosystem that allows ESG dynamic
         monitoring of portfolios.
       </p>
@@ -441,17 +503,17 @@
           stroke="white" />
       </svg>
     </div>
-    <form class="w-[80%] grid grid-cols-1 gap-6">
+    <form class="w-[80%] grid grid-cols-1 gap-6 inputForm" >
       <div class="flex">
         <label
           class="w-[10%] border py-[3%] border-r text-center Poppins text-base leading-4 font-normal text-[#231F20] opacity-50">1.</label>
         <input type="text" class="w-[80%] p-[2%] Poppins text-base leading-[18px] text-[#231F20] font-semibold"
           value="Facebook Inc">
       </div>
-      <div class="flex">
+      <div class="flex" >
         <label
           class="w-[10%] border py-[3%] border-r text-center Poppins text-base leading-4 font-normal text-[#231F20] opacity-50">2.</label>
-        <input type="text" class="w-[80%] p-[2%]" placeholder="Add name company...">
+        <input type="text" class="w-[80%] p-[2%]" placeholder="Add name company..." id="inputText">
       </div>
       <div class="flex">
         <label
@@ -468,8 +530,8 @@
           class="w-[10%] border py-[3%] border-r text-center Poppins text-base leading-4 font-normal text-[#231F20] opacity-50">5.</label>
         <input type="text" class="w-[80%] p-[2%]" placeholder="Add name company...">
       </div>
-      <div class="flex flex-col gap-y-5 md:flex-row md:justify-between w-[90%]">
-        <button>
+      <div class="flex flex-col gap-y-5 md:flex-row md:justify-between w-[90%]" id="btnDiv">
+        <button id="inputBtn">
           <svg width="80" height="48" viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
             <rect width="80" height="48" rx="8" fill="white" />
             <path
@@ -661,6 +723,7 @@
     </article>
   </section>
     </footer>
+    <script src="../main.js"></script>
 </body>
 
 </html>

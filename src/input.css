@@ -26,6 +26,21 @@
     text-transform: uppercase;
   }
 
+  .modalNav a{
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 36px;
+    letter-spacing: -2px;
+    color: #231F20;
+    mix-blend-mode: normal;
+  }
+
+  .modalNav a:hover {
+    text-decoration: underline;
+    color: #97AD1D;
+    
+  }
 
   .footerNav p{
     font-size: 12px;
@@ -45,6 +60,55 @@
     color: #FFFFFF;
   }
 
+
+
+.addInput{
+  width: 10%;
+  border: 1px solid rgba(235, 231, 232, 0.9);
+  padding: 3% 0;
+  border-right: 1px solid #F0F0F0;
+  text-align: center;
+  font-family: 'Poppins';
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #231F20;
+  opacity: .5;
+
+
+}
+  .active{
+    display:block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    animation-name: "myAnimation";
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    transform-origin: right bottom;
+
+  }
+
+
+
+  @keyframes myAimation{
+    
+    from {
+      top: 0;
+    }
+    to{
+      bottom: 100%;
+    }
+  }
+
+  .hide{
+    display: none;
+  }
 
   .checkbox_footer{
     opacity: 0;
